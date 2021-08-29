@@ -1066,6 +1066,17 @@ select.form-control:not([size]):not([multiple]){
 	color: #63c7bd;
 }
 
+.ifram-styles{
+	width:640px;
+	height:640px;
+
+}
+@media screen and (max-width: 727px) {
+	.ifram-styles{
+		width:100%;
+		height: 640px;
+	}
+}
 
 
 
