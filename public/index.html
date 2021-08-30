@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en"><!-- Basic -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel= "manifest" href= "firebase.json" />
+     <!-- Site Metas -->
+    <title>Nishith and Deepali Wedding</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="./css/pogo-slider.min.css">
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="./css/style.css">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="./css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/custom.css">
+	<!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.0.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.0.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/9.0.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/9.0.0/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/9.0.0/firebase-functions.js"></script>
+    <script defer src="/__/firebase/9.0.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/9.0.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/9.0.0/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/9.0.0/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/9.0.0/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+	<!-- LOADER -->
+    <div id="preloader">
+		<div class="preloader pulse">
+			<h3>Nishith & Deepali</h3>
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+	
+	<!-- Start header -->
+	<header class="top-header">
+		<nav class="navbar header-nav navbar-expand-lg">
+            <div class="container">
+				<a class="navbar-brand" href="index.html"><img src="./images/logo.png" alt="image"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link active" href="#home">Home</a></li>
+                        <li><a class="nav-link" href="#about">About Us</a></li>
+                        <li><a class="nav-link" href="#story">Story</a></li>
+                        <li><a class="nav-link" href="#family">Family</a></li>
+                        <li><a class="nav-link" href="#gallery">Gallery</a></li>
+						<li><a class="nav-link" href="#wedding">Wedding/Venue</a></li>
+                        <li><a class="nav-link" href="#events">Events</a></li>
+						<li><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+	</header>
+	<!-- End header -->
+	
+	<!-- Start Banner -->
+	<div class="home-slider">
+		<ul class="rslides">
+			<li><img src="./images/slider-01.jpg" alt=""></li>
+			<li><img src="./images/slider-02.jpg" alt=""></li>
+			<li><img src="./images/slider-03.jpg" alt=""></li>
+		</ul>
+		<div class="lbox-details">
+			<h1>Nishith and Deepali</h1>
+			<h2>We're tying knot on</h3>
+			<div class="countdown main-time clearfix">
+				<div id="timer">
+					<h3> 29th November 2021</h3>
+					<div id="days"></div>
+					<div id="hours"></div>
+					<div id="minutes"></div>
+					<div id="seconds"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Banner -->
+	
+	<!-- Start About us -->
+	<div id="about" class="about-box">
+		<div class="about-a1">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="title-box">
+							<h2>Nishith <span> & </span> Deepali</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="row align-items-center about-main-info">
+							<div class="col-lg-4 col-md-6 col-sm-12">
+								<div class="about-m">
+									<div class="about-img">
+										<img class="img-fluid" src="./images/about-img-01.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-8 col-md-6 col-sm-12">
+								<h2> <i class="fa fa-heart-o" aria-hidden="true"></i> <span>Deepali</span> <i class="fa fa-heart-o" aria-hidden="true"></i></h2>
+								<p>
+								  She is an engineer by profession, Gentle, soft and cool by personality. <br />
+								  She has a heart, That beats from me. <br />
+								  She has a soul that soothes mine. <br />
+								  She has a charm that brightens my day. <br />
+								  Having her in my heart is the greatest previlege. <br />
+								  -Nishith
+								</p>
+							</div>
+						</div>
+						<div class="row align-items-center about-main-info">
+							<div class="col-lg-4 col-md-6 col-sm-12">
+								<div class="about-m">
+									<div class="about-img">
+										<img class="img-fluid" src="./images/about-img-02.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-8 col-md-6 col-sm-12">
+								<h2> <i class="fa fa-heart-o" aria-hidden="true"></i> <span>Nishith </span> <i class="fa fa-heart-o" aria-hidden="true"></i></h2>
+								<p>He's always an enthusiastic person, a dream catcher, a travel freak who always has a plan for everything. 
+									His dedication towards his work is tremendous. He's the most charming and sweetest person I've ever seen.
+									 Waiting to start this beautiful phase of life with him. -Deepali</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End About us -->
+	
+	<!-- Start Story -->
+	<div id="story" class="story-box main-timeline-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Story so far</h2>
+						<p>A blissful beginning</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="timeLine">
+				<div class="row">
+					<div class="lineHeader hidden-sm hidden-xs"></div>
+					<div class="lineFooter hidden-sm hidden-xs"></div>
+
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item" >
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">26</span>
+									<span>Jan</span>
+									<span>2021</span>
+								</div>
+								<div class="image">
+									<img src="./images/cheek.jpeg" alt="" style="object-fit: cover;"/>
+									<div class="title">
+										<h2>First Meet <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent">
+									<p class="lead">We had our first conversation on 26th January, 2021 and never tunred back from there.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">29</span>
+									<span>March</span>
+									<span>2021</span>
+								</div>
+								<div class="image">
+									<img src="./images/date.jpeg" alt="" style="object-fit: cover;"/>
+									<div class="title">
+										<h2>First date <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent">
+									<p class="lead">A date is called a date because its a date worth remembering!!</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">19</span>
+									<span>April</span>
+									<span>2021</span>
+								</div>
+								<div class="image">
+									<img src="./images/engagement.jpeg" alt="" style="object-fit: contain;" />
+									<div class="title">
+										<h2>Engagement <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent">
+									<p class="lead">In the heights, and in the lows, In rains, and in the summers, In the springs, and in the winters, In the love and in the hate, we promised to be together </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">11</span>
+									<span>June</span>
+									<span>2021</span>
+								</div>
+								<div class="image">
+									<img src="./images/travel.jpeg" alt=""  style="object-fit: contain;"/>
+									<div class="title">
+										<h2>First Travel <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent">
+									<p class="lead">What I like, she loves, when we are in each others' arms, we travel to heaven!!</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">04</span>
+									<span>July</span>
+									<span>2017</span>
+								</div>
+								<div class="image">
+									<img src="./images/time-05.jpg" alt="" />
+									<div class="title">
+										<h2>My Wedding <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent">
+									<p class="lead">Since then i came to Austria as refugee far from my lovers and friends far a way escaping from wars and threats searching a new life that i didn't find until yet.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">11</span>
+									<span>June</span>
+									<span>2021</span>
+								</div>
+								<div class="image">
+									<img src="./images/travel.jpeg" alt=""  style="object-fit: contain;"/>
+									<div class="title">
+										<h2>First Travel <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent">
+									<p class="lead">What I like, she loves, when we are in each others' arms, we travel to heaven!!</p>
+								</div>
+							</div>
+						</div>
+
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<!-- End Story -->
+	
+	<!-- Start Family -->
+	<div id="family" class="family-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Family</h2>
+						<p>people gracing our couplehood </p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="family-img">
+							<img class="img-fluid" src="./images/family-01.jpg" alt="" />
+						</div>
+						<div class="family-info">
+							<h4>Venkatesh Babu</h4>
+							<p>{ Deepali's Father }</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="family-img">
+							<img class="img-fluid" src="./images/family-02.jpg" alt="" />
+						</div>
+						<div class="family-info">
+							<h4>Smt. Poornima</h4>
+							<p>{ Deepali's Mother }</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="family-img">
+							<img class="img-fluid" src="./images/family-03.jpg" alt="" />
+						</div>
+						<div class="family-info">
+							<h4>Pranav</h4>
+							<p>{ Deepalis’s Brother }</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="family-img">
+							<img class="img-fluid" src="./images/family-04.jpg" alt="" />
+						</div>
+						<div class="family-info">
+							<h4>Mahesh Kumar </h4>
+							<p>{ Nishith's Father }</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="family-img">
+							<img class="img-fluid" src="./images/family-05.jpg" alt="" />
+						</div>
+						<div class="family-info">
+							<h4>Smt. Jyothi AK </h4>
+							<p>{ Nishith's Mother }</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Family -->
+	
+	<!-- Start Gallery -->
+	<div id="gallery" class="gallery-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Gallery</h2>
+						<p>Loaded from our hearts </p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<ul class="popup-gallery clearfix">
+					<li>
+						<a href="./images/gallery-01.jpg">
+							<img class="img-fluid" src="./images/gallery-01.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="./images/gallery-02.jpg">
+							<img class="img-fluid" src="./images/gallery-02.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="./images/gallery-03.jpg">
+							<img class="img-fluid" src="./images/gallery-03.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="./images/gallery-04.jpg">
+							<img class="img-fluid" src="./images/gallery-04.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="./images/gallery-05.jpg">
+							<img class="img-fluid" src="./images/gallery-05.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="./images/gallery-06.jpg">
+							<img class="img-fluid" src="./images/gallery-06.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="./images/gallery-07.jpg">
+							<img class="img-fluid" src="./images/gallery-07.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="./images/gallery-08.jpg">
+							<img class="img-fluid" src="./images/gallery-08.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- End Gallery -->
+	
+	<!-- Start Wedding -->
+	
+	<div id="wedding" class="wedding-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Wedding</h2>
+						<p><span style="font-family: 'Engagement', cursive; font-size: 20px;">THE</span> day, where I and her turn into <span style="font-family: 'Engagement', cursive; font-size: 20px;">WE</span>.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="serviceBox">
+                        <div class="service-icon"><i class="flaticon-reception-bell"></i></div>
+                        <h3 class="title">Reception Ceremony </h3>
+						<h4>06 July 2017 at 10:30 pm</h4>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur, deleniti eaque excepturi.
+                        </p>
+						<div class="event-inner">
+						<a href="https://www.google.com/maps/place/Sri+Dharmastala+Manjunatha+Swamy+Kalyana+Mantapa/@12.3206682,76.6221355,17z/data=!3m1!4b1!4m5!3m4!1s0x3baf7a91821eb19f:0xeab77644ce54d3ae!8m2!3d12.320663!4d76.6243242" target="_blank">See location <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+					</div>
+                    </div>
+                </div>
+				<div class="col-md-6 col-sm-6">
+                    <div class="serviceBox">
+                        <div class="service-icon"><i class="flaticon-wedding"></i></div>
+                        <h3 class="title">Wedding Ceremony </h3>
+						<h4>05 July 2017 at 9:30 pm</h4>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur, deleniti eaque excepturi.
+                        </p>
+						<div class="event-inner">
+							<a href="https://www.google.com/maps/place/Sri+Dharmastala+Manjunatha+Swamy+Kalyana+Mantapa/@12.3206682,76.6221355,17z/data=!3m1!4b1!4m5!3m4!1s0x3baf7a91821eb19f:0xeab77644ce54d3ae!8m2!3d12.320663!4d76.6243242" target="_blank">See location <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+						</div>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="col-md-6 col-sm-6"style="margin: 30px auto;">
+		<iframe class="ifram-styles" src="https://docs.google.com/forms/d/e/1FAIpQLSe1CEJSLumtGToyTzm5-GgNdiBoR-CFM58k-8SBP3liAeXNoA/viewform?embedded=true"  frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+	</div>
+	</div>
+
+	
+	<!-- End Wedding -->
+	
+	<!-- Start Contact -->
+	<div id="contact" class="contact-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Contact us</h2>
+						<p>We need your presense, with very less hiccups </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Contact -->
+	
+	<!-- Start Footer -->
+	<footer class="footer-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">Sweetwedding</a> Design By : <a href="https://html.design/">html design</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+
+	<!-- ALL JS FILES -->
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+	<script src="./js/jquery.magnific-popup.min.js"></script>
+    <script src="./js/jquery.pogo-slider.min.js"></script> 
+	<script src="./js/slider-index.js"></script>
+	<script src="./js/smoothscroll.js"></script>
+	<script src="./js/responsiveslides.min.js"></script>
+    <script src="./js/timeLine.min.js"></script>	
+	<script src="./js/form-validator.min.js"></script>
+    <script src="./js/contact-form-script.js"></script>
+    <script src="./js/custom.js"></script>
+	<script src="./app.js"></script>
+	<script src="./sw.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+		  const loadEl = document.querySelector('#load');
+		  // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+		  // // The Firebase SDK is initialized and available here!
+		  //
+		  // firebase.auth().onAuthStateChanged(user => { });
+		  // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+		  // firebase.firestore().doc('/foo/bar').get().then(() => { });
+		  // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+		  // firebase.messaging().requestPermission().then(() => { });
+		  // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+		  // firebase.analytics(); // call to activate
+		  // firebase.analytics().logEvent('tutorial_completed');
+		  // firebase.performance(); // call to activate
+		  //
+		  // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  
+		  try {
+			let app = firebase.app();
+			let features = [
+			  'auth', 
+			  'database', 
+			  'firestore',
+			  'functions',
+			  'messaging', 
+			  'storage', 
+			  'analytics', 
+			  'remoteConfig',
+			  'performance',
+			].filter(feature => typeof app[feature] === 'function');
+			loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+		  } catch (e) {
+			console.error(e);
+			loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+		  }
+		});
+	  </script>
+</body>
+</html>
