@@ -1066,15 +1066,15 @@ select.form-control:not([size]):not([multiple]){
 	color: #63c7bd;
 }
 
-.ifram-styles{
+.iframe-styles{
 	width:640px;
-	height:640px;
+	height:1000px;
 
 }
 @media screen and (max-width: 727px) {
-	.ifram-styles{
+	.iframe-styles{
 		width:100%;
-		height: 640px;
+		height: 1000px;
 	}
 }
 
